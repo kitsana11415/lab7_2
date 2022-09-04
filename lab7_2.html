@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calculate(){
+            var inputObj1 = document.getElementById("arg1");
+            var inputObj2 = document.getElementById("arg2");
+            var com = document.getElementById("or");
+
+            var sum;
+            if(com.value == "+"){
+                sum = parseInt(inputObj1.value) + parseInt(inputObj2.value);
+            }
+            else if(com.value == "-"){
+                sum = parseInt(inputObj1.value) - parseInt(inputObj2.value);
+            }
+            else if(com.value == "*"){
+                sum = parseInt(inputObj1.value) * parseInt(inputObj2.value);
+            }
+            else if(com.value == "/"){
+                sum = parseInt(inputObj1.value) / parseInt(inputObj2.value);
+            }
+            var ans = document.getElementById("answer");
+            ans.value = sum;
+            
+        
+
+        }
+
+    </script>
+</head>
+<body>
+    <form action="">
+        <input id="arg1" type="number"> 
+        <select name="or" id="or">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+        </select>
+        <input id="arg2" type="number">
+        =
+        <input id="answer" >
+        <button onclick="calculate()"
+        type="button">Go</button>
+
+    </form>
+</body>
+</html>
